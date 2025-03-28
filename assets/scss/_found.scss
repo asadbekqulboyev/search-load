@@ -1,0 +1,718 @@
+.found {
+    padding-bottom: 100px;
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        h2 {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    &-filter {
+        display: flex;
+        gap: 13px;
+        align-items: center;
+
+        .nice-select {
+            border-radius: 4px;
+            background: #E4E4E4;
+            border: none;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            height: 25px;
+            padding-top: 0;
+            padding-bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 137px;
+
+        }
+    }
+
+    &-page {
+        display: flex;
+        gap: 10px;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        align-items: center;
+
+        span {
+            opacity: 0.5;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-card {
+        padding: 10px;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 0px 0px 44.3px 0px rgba(0, 0, 0, 0.10);
+        margin-top: 10px;
+        position: relative;
+        z-index: 2;
+
+        &:first-child {
+            margin-top: 20px;
+        }
+
+        &_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .button{
+                padding: 6px 7px;
+                display: flex;
+                width: fit-content;
+                margin-left: auto;
+                text-decoration: none;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 4px;
+                background: #536AD4;    
+                color: #FFF;
+            }
+        }
+
+        &_infos {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            .favorite {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .time {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                opacity: 0.5;
+            }
+
+            .views {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                opacity: 0.5;
+            }
+            
+        }
+
+        &_cancel {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        &_body {
+            display: flex;
+            margin-top: 10px;
+            gap: 10px;
+            &.fonds_body{
+                justify-content: space-between;
+                .logo{
+                    border-radius: 4px;
+                    background: #fff;
+                    max-width: 104px;
+                }
+                .company-info{
+                    max-width: 420px;
+                    
+                }
+                .company-info_top{
+                    flex-direction: row;
+                    max-width: 420px;
+                    height: fit-content;
+                    width: 100%;
+                    margin-top: auto;
+                    gap: 10px;
+                    .company_information{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                    }
+                }
+                .found-bid{
+                    margin-top: auto;
+                }
+            }
+            @media #{$tablet} {
+                flex-wrap: wrap;
+            }
+
+            .company-info {
+                max-width: 306px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                @media #{$mobile} {
+                    max-width: 100%;
+                }
+
+                &_top {
+                    background-color: #EAEDF9;
+                    border-radius: 4px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 130px;
+
+                    &-header {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .id {
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            opacity: 0.5;
+                        }
+
+                        .rating {
+                            display: flex;
+                            align-items: center;
+                            gap: 3px;
+                            color: #10BF00;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                    }
+                }
+
+                .company-name {
+                    font-family: "Yandex Sans Text";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    margin-top: 3px;
+                }
+
+                .contacts {
+                    border-radius: 4px;
+                    background: #FFF;
+                    padding: 6px 10px;
+
+                    .contact-header {
+                        display: flex;
+                        justify-content: space-between;
+                        cursor: pointer;
+
+                        .arrow {
+                            height: 14px;
+                        }
+                    }
+
+                    .contact-info {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 0;
+                        overflow: hidden;
+                        transition: .3s height ease, .3s padding ease;
+
+                        &.show {
+                            height: 30px;
+                            padding-top: 12px;
+                        }
+                    }
+
+                    .contact-name {
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    .contact-phone {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        a {
+                            color: #3B3B3B;
+                            font-family: "Yandex Sans Text";
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .contact-socials {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                }
+
+                .comment-box {
+                    border-radius: 4px;
+                    background: #E4E4E4;
+                    padding: 5px 10px 0px 10px;
+                    height: 56px;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    resize: none;
+                    outline: none;
+                    border: none;
+                    color: var(--, #3B3B3B);
+                    font-family: "Yandex Sans Text";
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                }
+            }
+
+            .info-boxes {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 410px;
+                gap: 10px;
+
+                @media #{$mobile} {
+                    max-width: 100%;
+                    width: 100%;
+                }
+
+                .info-box {
+                    width: 130px;
+                    border-radius: 5px;
+                    background: #FFF;
+                    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.10);
+                    padding: 10px;
+                    height: 76px;
+
+                    @media #{$mobile} {
+                        width: calc(50% - 5px);
+                        height: auto;
+                    }
+
+                    &:nth-child(n+4) {
+                        height: 110px;
+
+                        @media #{$mobile} {
+                            height: auto;
+                        }
+                    }
+
+                    span {
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        color: #9d9d9d;
+                    }
+
+                    h4 {
+                        margin-top: 10px;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+
+                    p {
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        margin-top: 3px;
+                    }
+                }
+            }
+
+            .found-bid {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 338px;
+
+                @media #{$mobile} {
+                    width: 100%;
+                }
+
+                &_top {
+                    border-radius: 5px;
+                    background: #E9ECF8;
+                    padding: 8px 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .left {
+                        p {
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            opacity: 0.5;
+                        }
+
+                        h4 {
+                            color: #536AD4;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                            margin-top: 8px;
+
+                            span {
+                                color: #A9B5EA;
+                                font-size: 15px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    .right {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        opacity: 0.7;
+                        gap: 6px;
+                        padding-left: 10px;
+                        border-left: 1px solid #CFD1DC;
+                        height: 100%;
+                    }
+                }
+
+                button {
+                    border-radius: 4px;
+                    background: #536AD4;
+                    color: #fff;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    padding: 13px;
+                    width: 100%;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+           
+            .found-note {
+                position: relative;
+                height: 56px;
+                background: #E4E4E4;
+                padding: 5px 10px;
+                border-radius: 4px;
+                textarea {
+                    border-radius: 4px;
+                    background: #E4E4E4;
+                    width: 100%;
+                    height: 100%;
+                    resize: none;
+                    border: none;
+                    outline: none;
+                    padding: 10px;
+                    color: var(--, #8f8f8f);
+                    font-family: "Yandex Sans Text";
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                }
+
+                .edit {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+            }
+        }
+    }
+
+    &-offer {
+        border-radius: 10px;
+        background: #ECECEC;
+        margin-top: -10px;
+        position: relative;
+        z-index: 1;
+        padding: 30px 20px 20px 20px;
+
+        &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                color: #536AD4;
+                font-family: "Yandex Sans Text";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+
+        .search-row.offer {
+            margin-top: 20px;
+            flex-wrap: wrap;
+            align-items: end;
+
+            h3 {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin-bottom: 6px;
+            }
+
+            .nice-select {
+                width: 50%;
+                height: 100%;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                border: none;
+                height: 100%;
+                padding-left: 0;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                border-radius: 4px;
+                background: #FFF;
+                display: flex;
+                padding: 5px 10px;
+                height: 25px;
+                align-items: center;
+                width: 118px;
+            }
+
+            .input-group {
+                display: flex;
+                align-items: end;
+                position: relative;
+
+                .option {
+                    min-height: 20px;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 9px;
+                }
+
+                .params {
+                    position: relative;
+                    border-radius: 4px;
+                    background: #FFF;
+                    display: flex;
+                    padding: 5px 10px;
+                    height: 25px;
+                    align-items: center;
+                    width: 139px;
+
+                    .nice-select {
+                        width: 50%;
+                        height: 100%;
+                        background-color: transparent;
+                        display: flex;
+                        align-items: center;
+                        border: none;
+                        height: 100%;
+                        padding-left: 0;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: normal;
+
+                        .list {
+                            left: -10px;
+
+
+                        }
+                    }
+
+                    .nice-select:nth-child(2) {
+                        border-right: 1px solid #8f8f8f;
+                        border-radius: 0;
+                        margin-right: 5px;
+                    }
+                }
+
+                .attr {
+                    position: absolute;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    position: absolute;
+                    top: 6px;
+                    bottom: 0;
+                    right: 6px;
+                    border-left: 1px solid #9D9D9D;
+                    padding-left: 5px;
+                    height: fit-content;
+                }
+            }
+
+            label {
+                width: 118px;
+
+                input {
+                    border-radius: 4px;
+                    background: #FFF;
+                    width: 100%;
+                    padding: 6px 9px;
+                    border: none;
+                    outline: none;
+                    height: 25px;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+
+                    &::-webkit-inner-spin-button,
+                    &::-webkit-outer-spin-button {
+                        display: none;
+                    }
+                }
+            }
+
+            .prepayment {
+                height: 25px;
+                width: 104px;
+                border-radius: 4px;
+                background: #F6F7FD;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 9px;
+                color: #536AD4;
+                text-align: right;
+                font-family: "Yandex Sans Text";
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                text-decoration: none;
+            }
+        }
+
+        .offer-info {
+            margin-top: 3px;
+            color: #3B3B3B;
+            font-family: "Yandex Sans Text";
+            font-size: 8px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            max-width: 104px;
+            opacity: 0.5;
+        }
+
+        .offer-option {
+            height: 25px;
+            width: 120px;
+            border-radius: 4px;
+            background: #F6F7FD;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 9px;
+            color: #536AD4;
+            text-align: right;
+            font-family: "Yandex Sans Text";
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        &-comment {
+            border-top: 1px solid #d1d1d1;
+            padding-top: 11px;
+            margin-top: 10px;
+
+            h4 {
+                color: #3B3B3B;
+                font-family: "Yandex Sans Text";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            textarea {
+                width: 100%;
+                height: 62px;
+                resize: none;
+                border-radius: 4px;
+                background: #FFF;
+                padding: 6px 9px;
+                border: none;
+                margin-top: 6px;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                outline: none;
+            }
+        }
+
+        &-submit {
+            border-radius: 5px;
+            background: #536AD4;
+            width: 182px;
+            padding: 6px;
+            text-align: center;
+            margin-top: 10px;
+            color: #FFF;
+            font-family: "Yandex Sans Text";
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
