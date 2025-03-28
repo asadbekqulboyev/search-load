@@ -1543,6 +1543,9 @@ body {
 .found {
   padding-bottom: 100px;
 }
+.found.oplate {
+  margin-top: 50px;
+}
 .found-top {
   display: flex;
   justify-content: space-between;
